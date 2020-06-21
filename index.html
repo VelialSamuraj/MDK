@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>EQ Mercedes-Benz</title>
+</head>
+<body>
+	<header>
+		<div id="logo" onclick="slowScroll('#top')">
+			<span>EQ Mercedes-Benz</span>
+		</div>
+		<div id="about">
+			<a href="#" title="Модели" onclick="slowScroll('#overview')">Модели</a>
+			<a href="#" onclick="slowScroll('#info')"  title="О сайте" >О сайте</a>
+			<a href="#" onclick="slowScroll('#contacts')" title="Контакты" >Контакты</a>
+		</div>
+	</header>
+
+	<div id="top">
+		<img url="https://img.drive.ru/i/0/5e1849c3ec05c4302e0000ac.jpg">
+		<h2>The best or nothing</h2>
+	</div>
+		<div id="info">
+	<section>
+		
+		<div class="neonText">
+			<h1>Информация о сайте</h1>
+			<p>Этот сайт был разработан для проекта по предмету МДК 08.01. Тема проекта была утверждена с преподавателем  предмета.</p>
+			<p>Внимание! Автор данной статьи не несет ответственности за любые последствия от ее прочтения, а также за ваше плохое самочувствие, детей-двоечников и долги по ипотеке.</p>
+			<p>Данный ресурс носит исключительно ознокомительный  характер и никак не желает оскорбить кого-либо</p>
+			<p>Всего хорошего!</p>
+		</div>
+	</section>
+	</div>
+
+	<div id="overview">
+		<h2>Модели</h2>
+		<h4>Немного про электрокары</h4>
+
+		<div class="img">
+			<img src="https://img.drive.ru/i/0/5b8f912fec05c4dc67000062.jpg">
+			<h3>Mercedes-Benz EQC 400</h3>
+			
+		</div>
+		<div class="img">
+			<img src="https://img.drive.ru/i/0/5c7f760cec05c4d76b000021.jpg">
+			<h3>Mercedes-Benz EQV </h3>
+		</div>
+		<div class="img">
+			<img src="https://autoreview.ru/images/gallery/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8/2019/September/05/smart-forfour1.jpg">
+			<h3>Mercedes-Benz Smart </h3>
+		</div>
+		<div class="img">
+			<img src="https://autoreview.ru/images/gallery/%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8/2020/February/25/mercedes-eqa2.jpg">
+			<h3>Mercedes-Benz EQA </h3>
+		</div>
+	</div>	
+
+	<div id="contacts">
+		<center>
+			<h5>Обратная связь</h5>
+		</center>
+		<form id="form_input">
+			<label for="name">Имя<span>*</span></label><br>
+			<input type="text" placeholder="Введите имя" name="name" id="name"><br>
+			<label for="email">Ваша почта<span>*</span></label><br>
+			<input type="email" placeholder="Введите email" name="email" id="email"> 
+			<label for="message">Сообщение<span>*</span></label><br>
+			<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+			<div class="middle">
+				<button class="button-hover">
+					<span>Отправить</span>
+				</button>
+			</div>
+		</form>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		function slowScroll(id){
+			$('html,body').animate({
+				scrollTop: $(id).offset().top
+			}, 500);
+		}
+
+		$(document).on("scroll", function (){
+			if($(window).scrollTop() === 0)
+				$("header").removeClass("fixed");
+			else
+				$("header").attr("class","fixed");
+		});
+	</script>
+</body>
+</html>
